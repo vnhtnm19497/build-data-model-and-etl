@@ -67,16 +67,6 @@ accounts_series_table_insert = ("""INSERT INTO accountsseries(
 ) VALUES (%s, %s, %s, %s)
 """)
 
-# FIND SONGS
-
-song_select = ("""
-    SELECT song_id, artists.artist_id
-    FROM songs JOIN artists ON songs.artist_id = artists.artist_id
-    WHERE songs.title = %s
-    AND artists.name = %s
-    AND songs.duration = %s
-""")
-
 # QUERY LISTS
 
 create_table_queries = [accounts_country_table_create, accounts_data_table_create, accounts_series_table_create]
